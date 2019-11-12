@@ -1,6 +1,6 @@
 # UrlDecreaser
 
-
+Django application which converts provided link to his shorter version.
 
 ## Project is created with:
 
