@@ -1,0 +1,11 @@
+{% extends 'master_page.html' %}
+
+
+{% block content %}
+<div class="alert alert-dark" role="alert">
+  <h4 class="alert-heading">Well done!</h4>
+  <p>Your new link is:</p>
+  <hr>
+  <p class="mb-0">http://127.0.0.1:8000/{{ shortcut }}</p>
+</div>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'master_page.html' %}
+
+
+{% block content %}
+<div class="card">
+  <div class="card-header">
+    <h1>Url Decreaser</h1>
+  </div>
+    <div class="card-body">
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">Put your link:</span>
+              </div>
+              <input name="link" type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+            <button type="submit" class="btn btn-dark">Generate new link</button>
+        </form>
+    </div>
+  </div>
+{% endblock %}
