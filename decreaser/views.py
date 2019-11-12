@@ -27,10 +27,6 @@ def home_response(request):
     return render(request, 'home.html')
 
 
-def display_short_link(request, shortcut):
-    return render(request, 'new_url.html', {'shortcut': shortcut})
-
-
 def redirect_to_big_link(request, shortcut):
     link = get_object_or_404(UrlObject, shortcut=shortcut)
     return HttpResponseRedirect(link.link)
