@@ -8,10 +8,12 @@ from .forms import UrlObjectForm
 
 
 def generate_shortcut():
-    result = ''
-    for sign in range(1, 8):
-        result += choice(ascii_letters + digits)
-    return result
+    while True:
+        result = ''
+        for sign in range(1, 8):
+            result += choice(ascii_letters + digits)
+        if UrlObject.objects.filter(shortcut=result).count() == 0:
+            return result
 
 
 def home_response(request):
